@@ -1,0 +1,35 @@
+@import 'tailwindcss';
+
+@source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
+@source '../../storage/framework/views/*.php';
+@source '../**/*.blade.php';
+@source '../**/*.js';
+
+@theme {
+    --font-sans: 'Instrument Sans', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
+        'Segoe UI Symbol', 'Noto Color Emoji';
+
+    --font-chewy: 'Chewy', 'cursive';
+
+    --aspect-banner-video: 8 / 3;
+
+    --color-joyday-blue: #1765AD;
+    --color-joyday-yellow: #fed402;
+    --color-joyday-orange: #f7941e;
+}
+
+
+@layer components {
+    .banner-slide{
+        @apply flex flex-col h-full;
+    }
+
+    .banner-slide .banner-overlay{
+        @apply invisible bottom-0 absolute opacity-0 w-full scale-105 transition-all duration-100 delay-0 ease-linear;
+    }
+
+    .banner-slide .banner-overlay.show{
+        @apply visible opacity-100 scale-100 duration-500 delay-300;
+    }
+
+}
