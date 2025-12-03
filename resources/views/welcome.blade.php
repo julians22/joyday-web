@@ -43,7 +43,7 @@
     <main>
         <div class="bg-joyday-blue h-screen">
             <!-- Slider main container -->
-            <div class="h-full swiper">
+            <div class="h-full swiper" style="--swiper-navigation-top-offset: 82%; --swiper-navigation-sides-offset: 158px; --swiper-navigation-color: transparent;">
                 <!-- Additional required wrapper -->
                 <div class="swiper-wrapper">
                     <!-- Slides -->
@@ -93,10 +93,14 @@
                         </div>
                     </div>
                 </div>
-        
+
                 <!-- If we need navigation buttons -->
-                <div class="swiper-button-prev"></div>
-                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev">
+                    <img src="{{ asset('arrow-left.png') }}" alt="">
+                </div>
+                <div class="swiper-button-next">
+                    <img src="{{ asset('arrow-right.png') }}" alt="">
+                </div>
             </div>
         </div>
 
